@@ -125,3 +125,39 @@ const engineerAddition = () => {
   });
 
 }
+
+const internAddition = () => {
+  inquirer.prompt([{
+    type: 'input',
+    message: 'What is the intern\'s name?',
+    name: 'name',
+    validate: validate.notEmpty
+  },
+  {
+    type: 'input',
+    message: 'What is the intern\'s employee ID?',
+    name: 'id',
+    validate: validate.numbersOnly
+  },
+  {
+    type: 'input',
+    message: 'What is the intern\'s email address?',
+    name: 'email',
+    validate: validate.email
+  },
+  {
+    type: 'input',
+    message: 'What school does the intern attend?',
+    name: 'school',
+    validate: validate.notEmpty
+  },
+
+  ]).then(function ({ name, id, email, school }) {
+    let newIntern;
+    newIntern = new Intern(name, id, email, school);
+    membersArr.push(newIntern);
+    employeeAddition();
+
+  });
+
+}
