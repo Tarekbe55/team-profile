@@ -1,5 +1,5 @@
 
-const engineerHTML = (role) => {
+const engineerTemplate = (role) => {
     return `
     <div class="col-md-3 card employeeCard border bg-custom">
     <div class="card-header">
@@ -13,4 +13,4 @@ const engineerHTML = (role) => {
 `
 }
 
-module.exports = engineerHTML;
+module.exports = engineerTemplate;

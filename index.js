@@ -1,13 +1,13 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const validate = require('./src/validate');
+const validate = require('./html/validate');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
-const managerHTML = require('./html/managerTemplate');
-const engineerHTML = require('./html/engineerTemplate');
-const internHTML = require('./html/internTemplate');
-const renderHTML = require('./html/finalTemplate');
+const managerTemplate = require('./html/managerTemplate');
+const engineerTemplate = require('./html/engineerTemplate');
+const internTemplate = require('./html/internTemplate');
+const finalTemplate = require('./html/finalTemplate');
 
 const membersArr = [];
 let teamName = "";
@@ -85,7 +85,7 @@ const employeeAddition = () => {
     if (addOrEnd.includes('finished')) {
 
       const finishHTML = finalTemplate(teamName, addEmployeeCard());
-      fs.writeFileSync('./dist/new.html', finishHTML);
+      fs.writeFileSync('./html/new.html', finishHTML);
     };
   });
 }
@@ -161,3 +161,26 @@ const internAddition = () => {
   });
 
 }
+
+const addEmployeeCard = () => {
+
+  let cards = "";
+  membersArr.forEach(member => {
+
+    if (member.getRole() === 'Manager') {
+      cards += managerTemplate(member)
+    }
+    if (member.getRole() === 'Engineer') {
+      cards += engineerTemplate(member)
+    }
+    if (member.getRole() === 'Intern') {
+      cards += internTemplate(member)
+    }
+  })
+  return cards;
+}
+
+function init() {
+  startPrompt();
+}
+init()

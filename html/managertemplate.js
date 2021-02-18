@@ -1,4 +1,4 @@
-const managerHTML = (role) => {
+const managerTemplate = (role) => {
     return `
     <div class="col-md-3 card employeeCard border bg-custom">
     <div class="card-header">
@@ -12,4 +12,4 @@ const managerHTML = (role) => {
 `
 }
 
-module.exports = managerHTML;
+module.exports = managerTemplate;

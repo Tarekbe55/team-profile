@@ -1,7 +1,7 @@
 
 
-  const internHTML = (role) => {
-    return `
+const internTemplate = (role) => {
+  return `
     <div class="col-md-3 card employeeCard border bg-custom">
     <div class="card-header">
         <h3>${role.name}</h3>
@@ -14,4 +14,4 @@
 `
 }
 
-module.exports = internHTML;
+module.exports = internTemplate;

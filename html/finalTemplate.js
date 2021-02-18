@@ -1,5 +1,5 @@
-function renderHTML(teamName, addCard) {
-    return `
+function finalTemplate(teamName, addCard) {
+  return `
     <!DOCTYPE html>
     <html lang="en">
       <head>
@@ -21,6 +21,44 @@ function renderHTML(teamName, addCard) {
         <link rel="stylesheet" href="./style.css" />
         
         <title>${teamName} Team Profiles</title>
+        <style>
+
+
+        .navbar {
+          background-color: gray;
+        }
+
+
+        body {
+          font-family: 'Roboto', serif;
+          font-size: 15px;
+          margin: 0;
+          width: 100%;
+          background-color: black;
+          color: white;
+        }
+    
+        .employeeCard {
+          margin-right: 20px;
+          margin-top: 40px;
+          border-radius: 5%;
+          background-color: rgb(44, 41, 41);
+          height: 300px;
+          border-color: green;
+        }
+    
+        .employeeRow {
+          padding-right: 200px;
+          padding-left: 200px;
+          justify-content: center;
+        }
+    
+        .card-header {
+          background-color: red;
+        }
+    
+        
+          </style>
       </head>
     
       <body>
@@ -43,4 +81,4 @@ function renderHTML(teamName, addCard) {
     `
 }
 
-module.exports = renderHTML;
+module.exports = finalTemplate;
