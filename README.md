@@ -1,6 +1,10 @@
 # Team Profile Generator
 This is an application that uses inquirer to prompt questions to the user. Then an HTML is dynamically created using the responses the user provided.
 
+
+[Walkthrough Video](https://youtu.be/PHx66sF-9sI)
+
+
 ## User Story
 
 ```md
