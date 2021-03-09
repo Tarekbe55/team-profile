@@ -6,23 +6,23 @@ describe('Intern Class', () => {
 
     it('Can instantiate Intern instance', () => {
         const intern = new Intern();
-        expect(typeof(intern)).toBe('object');
+        expect(typeof (intern)).toBe('object');
     })
 
     describe('Constructor', () => {
 
         it('should set the Intern\'s school', () => {
-            const school = 'ECU';
-            const intern = new Intern('Jared', '5', 'jared@test.com', 'ECU');
+            const school = 'NCSU';
+            const intern = new Intern('Tarek', '5', 'tbtarek@gmail.com', 'NCSU');
             expect(intern.school).toBe(school);
-        }); 
+        });
 
     });
 
     describe('getSchool()', () => {
         it('should return the Intern\'s school', () => {
-            const school = 'ECU';
-            const intern = new Intern('Jared', '5', 'jared@test.com', 'ECU');
+            const school = 'NCSU';
+            const intern = new Intern('Tarek', '5', 'tbtarek@gmail.com', 'NCSU');
             expect(intern.getSchool()).toBe(school);
         })
     });
@@ -31,7 +31,7 @@ describe('Intern Class', () => {
     describe('getrole()', () => {
         it('should return "Intern"', () => {
             const testRole = 'Intern';
-            const intern = new Intern('Jared', '5', 'jared@test.com', 'ECU');
+            const intern = new Intern('Tarek', '5', 'tbtarek@gmail.com', 'NCSU');
             expect(intern.getRole()).toBe(testRole);
         });
     });

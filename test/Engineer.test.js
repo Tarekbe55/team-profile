@@ -6,23 +6,23 @@ describe('Engineer Class', () => {
 
     it('Can instantiate Engineer instance', () => {
         const engineer = new Engineer();
-        expect(typeof(engineer)).toBe('object');
+        expect(typeof (engineer)).toBe('object');
     })
 
     describe('Constructor', () => {
 
         it('should set engineer\'s github', () => {
-            const github = 'JarWeav';
-            const engineer = new Engineer('Jared', '5', 'jared@test.com', github);
+            const github = 'tarekbe55';
+            const engineer = new Engineer('Tarek', '5', 'tbtarek@gmail.com', github);
             expect(engineer.github).toBe(github);
-        }); 
+        });
 
     });
 
     describe('get()', () => {
         it('should return the engineer\'s github via getGithub()', () => {
-            const github = 'JarWeav';
-            const engineer = new Engineer('Jared', '5', 'jared@test.com', github);
+            const github = 'tarekbe55';
+            const engineer = new Engineer('Tarek', '5', 'tbtarek@gmail.com', github);
             expect(engineer.getGithub()).toBe(github);
         })
     });
@@ -31,7 +31,7 @@ describe('Engineer Class', () => {
     describe('getrole()', () => {
         it('should return "Engineer"', () => {
             const testRole = "Engineer";
-            const engineer = new Engineer('Jared', '5', 'jared@test.com', 'JarWeav');
+            const engineer = new Engineer('Tarek', '5', 'tbtarek@gmail.com', 'tarekbe55');
             expect(engineer.getRole()).toBe(testRole);
         })
     });
